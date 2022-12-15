@@ -44,7 +44,7 @@ const Table = () => {
 
         <>
           {emps?.map((item, index) => (
-            <tr>
+            <tr key={index}>
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.email}</td>
