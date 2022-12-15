@@ -4,16 +4,23 @@ import { useEffect, useState } from 'react';
 const Table = () => {
   const [emps, setEmps] = useState([]);
 
-  useEffect(async () => {
+  const getData = async() => {
     await axios
       .get('http://localhost:3001/employees/all')
       .then((res) => setEmps(res.data.employees))
-      .catch((error) => console.log(error));
-  }, []);
+      
+  }
+
+  useEffect(() => {
+   getData()
+},[])
+  
+
 
   return (
     <div>
-      {/* <table>
+      
+      <table>
         <tr>
           <th>Employee ID</th>
           <th>Name</th>
@@ -21,26 +28,19 @@ const Table = () => {
           <th>Username</th>
           <th>Role</th>
         </tr>
-        <tr>
-            <T></T>
-            <T></T>
-            <T></T>
-            <T></T>
-            <T></T>
-            <T></T>
-        </tr> */}
-      <ul>
+     
+      <>
         {emps?.map((item, index) => (
-          <>
-            <li>{item.id}</li>
-            <li>{item.name}</li>
-            <li>{item.email}</li>
-            <li>{item.username}</li>
-            <li>{item.role}</li>
-          </>
+          <tr>
+            <td>{item.id}</td>
+            <td>{item.name}</td>
+            <td>{item.email}</td>
+            <td>{item.username}</td>
+            <td>{item.role}</td>
+          </tr>
         ))}
-      </ul>
-      {/* </table> */}
+      </>
+      </table>
     </div>
   );
 };
