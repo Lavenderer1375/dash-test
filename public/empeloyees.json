@@ -1,0 +1,25 @@
+{
+    "employees":[
+    {
+    "id":1,
+    "name": "Tony Stark", 
+    "email": "tony.stark@avengers.com", 
+    "username": "tonystark", 
+    "role": "Genius"},
+    {"id": 2, 
+    "name": "Steve Rogers", 
+    "email": "steve.rogers@avengers.com", 
+    "username": "steverogers", 
+    "role": "Leader"},
+    {"id": 3, 
+    "name": "Clint Barton", 
+    "email": "clint.barton@avengers.com", 
+    "username": "clintbarton", 
+    "role": "Arrow Man"},
+    {"id": 4,
+    "name": "Natasha Romanoff",
+    "email": "natasha.romanoff@avengers.com",
+    "username": "natasharomanoff",
+    "role": "Master Spy"}
+    ]
+}
